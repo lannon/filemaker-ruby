@@ -156,6 +156,16 @@ module Filemaker
           else
             expanded['-script.presort'] = value
           end
+        when :global 
+          if value.is_a? Array
+            if value.first.is_a? Array
+              value.each do |a|
+                expanded["#{a.first}.global"] = a.last
+              end
+            else
+              expanded["#{value.first}.global"] = value.last
+            end
+          end
         end
       end
 

@@ -33,7 +33,8 @@ module Filemaker
                       :script_prefind,
                       :script_presort,
                       :relatedsets_filter,
-                      :relatedsets_max)
+                      :relatedsets_max,
+                      :global)
 
         if id_or_hash.is_a? Hash
           perform_request('-find', id_or_hash, options)
