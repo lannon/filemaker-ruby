@@ -12,7 +12,8 @@ module Filemaker
         valid_options(options,
                       :script,
                       :relatedsets_filter,
-                      :relatedsets_max)
+                      :relatedsets_max,
+                      :global)
 
         perform_request('-new', values, options)
       end
